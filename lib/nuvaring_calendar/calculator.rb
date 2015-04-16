@@ -29,10 +29,8 @@ class NuvaringCalendar
 			max = current_date + @limit - @insertion_days
 			begin
 				current_date += @insertion_days
-				puts "CURRENT_DATE #{current_date.to_s}"
 				@removal_dates << current_date
 				current_date += @wait_days
-				puts "CURRENT_DATE #{current_date.to_s}"
 				@insertion_dates << current_date
 			end while current_date  <= max
 		end

@@ -49,8 +49,22 @@ describe NuvaringCalendar do
 		end
 	end
 
-	describe ""
+	describe "1 week in, 2 weeks out, 4 months limit" do
+		before do
+			@start_date = "2015/05/11"
+			# really 2015-09-14 should not be included but there is difficulty getting the exact max date
+			@expected_insertion_dates = %w[2015-06-01 2015-06-22 2015-07-13 2015-08-03 2015-08-24 2015-09-14]
+			@expected_removal_dates = %w[2015-05-18 2015-06-08 2015-06-29 2015-07-20 2015-08-10 2015-08-31]
+			@cal = NuvaringCalendar.new @start_date, insertion_days: 7, wait_days: 14, limit: 120
+		end
+		it "insertion_dates" do
+			@cal.insertion_dates.must_equal @expected_insertion_dates
+		end
 
-	
+		it "removal dates" do
+			@cal.removal_dates.must_equal @expected_removal_dates
+		end
+	end
+
 
 end
