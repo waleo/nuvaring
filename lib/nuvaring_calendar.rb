@@ -11,6 +11,14 @@ class NuvaringCalendar
 	def removal_dates
 		@calculator.removal_dates.map(&:to_s)
 	end
+
+	def swap_dates
+		@calculator.swap_dates.map(&:to_s)
+	end
+
+	def timeline
+		@calculator.timeline
+	end
 end
 
 require 'nuvaring_calendar/calculator'
