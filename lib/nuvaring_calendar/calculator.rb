@@ -40,7 +40,8 @@ class NuvaringCalendar
 			@swap_dates.each do |d|
 				swap_hash[d]
 			end
-			(((insertion_hash.merge(removal_hash).merge(swap_hash)).sort).map { |element| element.map { |inner_element| inner_element.to_s}}).to_h
+			array = (((insertion_hash.merge(removal_hash).merge(swap_hash)).sort).map { |element| element.map { |inner_element| inner_element.to_s}})
+			Hash[array]
 		end
 
 		private
