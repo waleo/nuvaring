@@ -17,6 +17,7 @@ class NuvaringCalendar
 		def initialize(default_insertion_date, options={})
 			@default_insertion_date = parse_date default_insertion_date
 			@insertion_dates = []
+			@insertion_dates << @default_insertion_date
 			@removal_dates = []
 			@swap_dates = []
 			@insertion_days = options[:insertion_days] || 21
