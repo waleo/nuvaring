@@ -20,11 +20,11 @@ NuvaringCalendar class takes the following options:
 Examples ( 3 weeks in , 1 week off)
 ------------------------------------------
 
-- Give insertion date
-
+Give insertion date
+    
     nuva = NuvaringCalendar.new("2015/12/12")
 
-- Returns and tags all future removal and insertion dates, limit 1.year from today.
+Returns and tags all future removal and insertion dates, limit 1.year from today.
 
     remove 1.1.2015
     insert 1.7.2015
